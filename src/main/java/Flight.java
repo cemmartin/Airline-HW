@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.Plus;
+
 import java.util.ArrayList;
 
 public class Flight {
@@ -6,20 +8,20 @@ public class Flight {
     private DeptAirport deptAirport;
     private ArrivalAirport arrivalAirport;
     private String departureTime;
-    private Plane plane;
+    private PlaneType planeType;
     private Pilot pilot;
     private ArrayList<CabinCrewMember> cabinCrewMembers;
     private ArrayList<Passenger> passengers;
 
-    public Flight(String flightNumber, DeptAirport deptAirport, ArrivalAirport arrivalAirport, String departureTime, Plane plane, Pilot pilot, ArrayList<CabinCrewMember> cabinCrewMembers, ArrayList<Passenger> passengers) {
+    public Flight(String flightNumber, DeptAirport deptAirport, ArrivalAirport arrivalAirport, String departureTime, Plane plane, Pilot pilot) {
         this.flightNumber = flightNumber;
         this.deptAirport = deptAirport;
         this.arrivalAirport = arrivalAirport;
         this.departureTime = departureTime;
         this.plane = plane;
         this.pilot = pilot;
-        this.cabinCrewMembers = cabinCrewMembers;
-        this.passengers = passengers;
+        this.cabinCrewMembers = new ArrayList<CabinCrewMember>();
+        this.passengers = new ArrayList<Passenger>();
     }
 
     public String getFlightNumber() {

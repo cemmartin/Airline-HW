@@ -5,9 +5,9 @@ public enum DeptAirport {
     YVR,
     LHR;
 
-    private String deptAirportCode;
+//    private final String deptAirportCode;
 
-    DeptAirport(String deptAirportCode) {
-        this.deptAirportCode = deptAirportCode;
-    }
+//    DeptAirport(String deptAirportCode) {
+//        this.deptAirportCode = deptAirportCode;
+//    }
 }

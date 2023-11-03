@@ -12,4 +12,16 @@ public enum PlaneType {
         this.capacity = capacity;
         this.weight = weight;
     }
+
+    public String getPlaneName() {
+        return planeName;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
 }

@@ -5,9 +5,6 @@ public enum ArrivalAirport {
     YVR,
     LHR;
 
-    private String arrivalAirportCode;
 
-    ArrivalAirport(String arrivalAirportCode) {
-        this.arrivalAirportCode = arrivalAirportCode;
-    }
+
 }
