@@ -42,6 +42,10 @@ public class PersonTest {
         assertEquals("LN12345", pilot.getLicenceNumber());
     }
 
+//    @Test
+//    public void getName(){
+//        assertEquals("Marcus H.", pilot.getName());
+//    }
 
 
 }

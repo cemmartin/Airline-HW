@@ -8,17 +8,17 @@ public class Flight {
     private DeptAirport deptAirport;
     private ArrivalAirport arrivalAirport;
     private String departureTime;
-    private PlaneType planeType;
-    private Pilot pilot;
+    private PlaneType planeType; //
+    private String pilot;
     private ArrayList<CabinCrewMember> cabinCrewMembers;
     private ArrayList<Passenger> passengers;
 
-    public Flight(String flightNumber, DeptAirport deptAirport, ArrivalAirport arrivalAirport, String departureTime, Plane plane, Pilot pilot) {
+    public Flight(String flightNumber, DeptAirport deptAirport, ArrivalAirport arrivalAirport, String departureTime, PlaneType planeType, String pilot) { //these are the problematic Plane |& Pilot
         this.flightNumber = flightNumber;
         this.deptAirport = deptAirport;
         this.arrivalAirport = arrivalAirport;
         this.departureTime = departureTime;
-        this.plane = plane;
+        this.planeType = planeType;
         this.pilot = pilot;
         this.cabinCrewMembers = new ArrayList<CabinCrewMember>();
         this.passengers = new ArrayList<Passenger>();
@@ -56,21 +56,22 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-    public Plane getPlane() {
-        return plane;
-    }
+//    public Plane getPlane() {
+//        return plane(getPlane(plane));
+//    }
 
-    public void setPlane(Plane plane) {
-        this.plane = plane;
-    }
 
-    public Pilot getPilot() {
-        return pilot;
-    }
+//    public void setPlane(Plane plane) {
+//        this.plane = plane;
+//    }
 
-    public void setPilot(Pilot pilot) {
-        this.pilot = pilot;
-    }
+//    public Pilot getPilot() {
+//        return pilot;
+//    }
+//
+//    public void setPilot(Pilot pilot) {
+//        this.pilot = pilot;
+//    }
 
     public ArrayList<CabinCrewMember> getCabinCrewMembers() {
         return cabinCrewMembers;
@@ -87,4 +88,13 @@ public class Flight {
     public void setPassengers(ArrayList<Passenger> passengers) {
         this.passengers = passengers;
     }
+
+    public void addPassenger(Passenger passenger){
+        this.passengers.add(passenger);
+    }
+    public void addCabinCrewMember(CabinCrewMember cabinCrewMember){
+        this.cabinCrewMembers.add(cabinCrewMember);
+    }
+
+
 }
