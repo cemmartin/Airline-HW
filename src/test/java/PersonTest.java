@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import flights.people.crew.CabinCrewMember;
@@ -23,7 +24,7 @@ public class PersonTest {
         pilot = new Pilot("Marcus H.", CrewRank.PILOT, "LN12345");
     }
 
-    //people.passenger.Passenger Test
+    //Passenger Test
     @Test
     public void getName(){
         assertEquals("Bella Y.", passenger.getName());
@@ -37,15 +38,25 @@ public class PersonTest {
     //Cabin Crew Tests
     @Test
     public void getCrewRank(){
-        assertEquals(CrewRank.FIRSTOFFICER, cabinCrewMember.getRank());
+        assertEquals("First Officer", cabinCrewMember.getRank());
+    }
+    @Test
+    public void crewRelayMessage() {
+        assertEquals("Testing testing 123", cabinCrewMember.relayMessage());
     }
 
-
-    //people.crew.Pilot Tests
+    //Pilot Tests
     @Test
     public void getLicenceNumber(){
         assertEquals("LN12345", pilot.getLicenceNumber());
     }
+
+    @Test
+    public void canPilotFlyPlane(){
+        assertEquals("Zooooom *plane sounds*", pilot.flyPlane());
+    }
+
+
 
 
 

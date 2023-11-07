@@ -14,8 +14,8 @@ import static org.junit.Assert.assertEquals;
 public class FlightTest {
 
     Flight flight;
-    DeptAirport deptAirport;
-    ArrivalAirport arrivalAirport;
+    AirportIDCode deptAirport;
+    AirportIDCode arrivalAirport;
     DepartureTime departureTime;
     PlaneType planeType;
     Pilot pilot;

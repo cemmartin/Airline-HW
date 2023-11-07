@@ -15,4 +15,8 @@ public class CrewMember extends Person {
         return rank.getRank();
     }
 
+    public String relayMessage() {
+        return "Testing testing 123";
+    }
+
 }
