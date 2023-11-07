@@ -1,4 +1,6 @@
-public class Pilot extends CabinCrewMember{
+package flights.people.crew;
+
+public class Pilot extends CabinCrewMember {
 
     private String licenceNumber;
 

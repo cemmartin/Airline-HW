@@ -1,3 +1,5 @@
+package flights.plane;
+
 public class Plane {
 
     private PlaneType planeType;

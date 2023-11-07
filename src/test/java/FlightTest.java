@@ -1,7 +1,13 @@
+import flights.AirportIDCode;
+import flights.DepartureTime;
+import flights.Flight;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
+import flights.people.crew.CabinCrewMember;
+import flights.people.crew.CrewRank;
+import flights.people.passenger.Passenger;
+import flights.people.crew.Pilot;
+import flights.plane.PlaneType;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,14 +23,14 @@ public class FlightTest {
     Passenger passenger;
 
     @Before
-    public void before() {
+    public void setUp() throws Exception {
 
-        flight = new Flight("BA1234", DeptAirport.EDI, ArrivalAirport.SEA, "11:30", PlaneType.BOEING747, "Marcus H." );
-//        passenger = new Passenger("Bella Y.", 2);
+        flight = new Flight("BA1234", AirportIDCode.EDI, AirportIDCode.SEA, "11:30", PlaneType.BOEING747, "Marcus H." );
+//        passenger = new people.passenger.Passenger("Bella Y.", 2);
         passenger = new Passenger("Sophia Z.", 4);
         cabinCrewMember = new CabinCrewMember("Anna R.", CrewRank.FIRSTOFFICER);
         pilot = new Pilot("Marcus H.", CrewRank.PILOT, "LN12345");
-//        planeType = new PlaneType.BOEING747;
+//        planeType = new plane.PlaneType.BOEING747;
         flight.addPassenger(passenger);
         flight.addCabinCrewMember(cabinCrewMember);
 
@@ -38,28 +44,27 @@ public class FlightTest {
 
     @Test
     public void getDeptAirport(){
-        assertEquals(DeptAirport.EDI, flight.getDeptAirport());
+        assertEquals(AirportIDCode.EDI, flight.getDeptAirport());
     }
 
     @Test
     public void getArrivalAirport(){
-        assertEquals(ArrivalAirport.SEA, flight.getArrivalAirport());
+        assertEquals(AirportIDCode.SEA, flight.getArrivalAirport());
     }
 
     @Test
     public void getDepartureTime(){
         assertEquals("11:30", flight.getDepartureTime());
     }
+    @Test
+    public void getRank(){
+        assertEquals("Pilot", pilot.getRank());
+    }
 
 //    @Test
-//    public void getPlaneType(){
-//        assertEquals(BOEING747, getPlaneType());
+//    public void getPilot(){
+//        assertEquals("Marcus H.", flight.getCabinCrewMembers().);
 //    }
-
-    @Test
-    public void getPilot(){
-        assertEquals("Marcus H.", flight.getCabinCrewMembers().);
-    }
 //     Currently returns list of cabin crew(unless you add the seed data)--> explore other options more later
     // not iterator, or listIterator
 

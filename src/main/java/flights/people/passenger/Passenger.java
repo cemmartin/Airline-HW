@@ -1,4 +1,8 @@
-public class Passenger extends Person{
+package flights.people.passenger;
+
+import flights.people.Person;
+
+public class Passenger extends Person {
 
     private int numberOfBags;
 

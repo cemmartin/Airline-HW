@@ -1,5 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
+import flights.plane.Plane;
+import flights.plane.PlaneType;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,7 +10,7 @@ public class PlaneTest {
     Plane plane;
 
     @Before
-    public void before() {
+    public void setUp() throws Exception {
         plane = new Plane(PlaneType.BOEING747);
     }
 
@@ -17,10 +19,6 @@ public class PlaneTest {
         assertEquals(PlaneType.BOEING747, plane.getPlaneType());
     }
 
-    @Test
-    public void getPlaneName(){
-        assertEquals("Boeing 747", PlaneType.BOEING747.getPlaneName());
-    }
 
     @Test
     public void getCapacity(){

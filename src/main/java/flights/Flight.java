@@ -1,19 +1,24 @@
-import com.sun.org.apache.xpath.internal.operations.Plus;
+package flights;
+
+import flights.people.crew.CabinCrewMember;
+import flights.people.passenger.Passenger;
+import flights.plane.PlaneType;
 
 import java.util.ArrayList;
 
 public class Flight {
 
     private String flightNumber;
-    private DeptAirport deptAirport;
-    private ArrivalAirport arrivalAirport;
+
+    private AirportIDCode deptAirport;
+    private AirportIDCode arrivalAirport;
     private String departureTime;
     private PlaneType planeType; //
     private String pilot;
     private ArrayList<CabinCrewMember> cabinCrewMembers;
     private ArrayList<Passenger> passengers;
 
-    public Flight(String flightNumber, DeptAirport deptAirport, ArrivalAirport arrivalAirport, String departureTime, PlaneType planeType, String pilot) { //these are the problematic Plane |& Pilot
+    public Flight(String flightNumber, AirportIDCode deptAirport, AirportIDCode arrivalAirport, String departureTime, PlaneType planeType, String pilot) { //these are the problematic plane.Plane |& people.crew.Pilot
         this.flightNumber = flightNumber;
         this.deptAirport = deptAirport;
         this.arrivalAirport = arrivalAirport;
@@ -32,20 +37,12 @@ public class Flight {
         this.flightNumber = flightNumber;
     }
 
-    public DeptAirport getDeptAirport() {
+    public AirportIDCode getDeptAirport() {
         return deptAirport;
     }
 
-    public void setDeptAirport(DeptAirport deptAirport) {
-        this.deptAirport = deptAirport;
-    }
-
-    public ArrivalAirport getArrivalAirport() {
+    public AirportIDCode getArrivalAirport() {
         return arrivalAirport;
-    }
-
-    public void setArrivalAirport(ArrivalAirport arrivalAirport) {
-        this.arrivalAirport = arrivalAirport;
     }
 
     public String getDepartureTime() {
@@ -56,20 +53,20 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-//    public Plane getPlane() {
+//    public plane.Plane getPlane() {
 //        return plane(getPlane(plane));
 //    }
 
 
-//    public void setPlane(Plane plane) {
+//    public void setPlane(plane.Plane plane) {
 //        this.plane = plane;
 //    }
 
-//    public Pilot getPilot() {
+//    public people.crew.Pilot getPilot() {
 //        return pilot;
 //    }
 //
-//    public void setPilot(Pilot pilot) {
+//    public void setPilot(people.crew.Pilot pilot) {
 //        this.pilot = pilot;
 //    }
 

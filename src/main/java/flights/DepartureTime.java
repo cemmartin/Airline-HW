@@ -1,3 +1,5 @@
+package flights;
+
 public class DepartureTime {
 
     private String departureTime;
